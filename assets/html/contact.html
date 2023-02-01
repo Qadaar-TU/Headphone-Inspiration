@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Design Alchemy</title>
+    <link rel="icon" type="image/x-icon" href="../img/logo.svg" />
+  </head>
+  <body>
+    <header>
+      <div class="top-bar">
+        <img src="../img/logo.svg" alt="Design Alchemy Logo" />
+        <div class="secondary-nav">
+          <ul>
+            <li>
+              <a href="#" class="active-link-sub-contact">Subsribe & Contact</a>
+            </li>
+            <li>
+              <div class="socials">
+                <ul>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Twitter</a></li>
+                  <li><a href="#">Youtube</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">DE</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="primary-nav">
+        <nav>
+          <ul>
+            <li><a href="../../index.html">about</a></li>
+            <li><a href="./lounger.html">lounger</a></li>
+            <li><a href="./experience.html">experience</a></li>
+            <li><a href="./inspiration.html">inspiration</a></li>
+            <li><a href="./shop.html">shop</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="contact">
+        <div class="contact-container">
+          <h2><span>conctact us</span> We listen to you</h2>
+
+          <div class="text-img-container">
+            <div class="container-left">
+              <img src="../img/headphone-5.jpg" alt="Headphones" />
+            </div>
+            <div class="container-right">
+              <p>
+                We strive for excellence - with the high standards we set for
+                our products and with our customer support so that you have a
+                great experience with us! Reach out to us and let us know how we
+                can help you. We listen carefully and get back to you in less
+                than 24h.
+              </p>
+              <p>
+                Subscribe to our newsletter to stay updated about new products
+                and discounts. It's worth it!
+              </p>
+              <form class="form-newsletter">
+                <label for="input-email-sub"></label>
+                <input
+                  type="email"
+                  name="input-email-sub"
+                  id="input-email-sub"
+                  placeholder="Type your email adress here"
+                  required
+                />
+                <input type="submit" value="Subscribe" />
+              </form>
+            </div>
+          </div>
+
+          <form class="form-contact">
+            <div class="container">
+              <div class="contact-form-left">
+                <label for="input-name">Your name <span>*</span></label>
+                <input
+                  type="text"
+                  name="input-name"
+                  id="input-name"
+                  placeholder="Type your name here"
+                  required
+                />
+                <label for="input-email"
+                  >Your email adress <span>*</span></label
+                >
+                <input
+                  type="email"
+                  name="input-email"
+                  id="input-email"
+                  placeholder="Type your email adress here"
+                  required
+                />
+                <div class="checkbox-container">
+                  <p>What are you interested in?</p>
+                  <fieldset>
+                    <div>
+                      <input
+                        type="checkbox"
+                        id="check-loudspeaker"
+                        name="check-loudspeaker"
+                      />
+                      <label for="check-loudspeaker">Loudspeakers</label>
+                    </div>
+                    <div>
+                      <input
+                        type="checkbox"
+                        id="check-headphones"
+                        name="check-headphones"
+                      />
+                      <label for="check-headphones">Headphones</label>
+                    </div>
+                    <div>
+                      <input
+                        type="checkbox"
+                        id="check-support"
+                        name="check-support"
+                      />
+                      <label for="check-support">Support</label>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="contact-form-right">
+                <label for="input-message">Your message <span>*</span></label>
+                <textarea
+                  name="input-message"
+                  id="input-message"
+                  placeholder="Type your message here"
+                  required
+                ></textarea>
+              </div>
+            </div>
+            <input type="submit" value="Send" />
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

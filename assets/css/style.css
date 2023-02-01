@@ -1,0 +1,499 @@
+/* ============ FONTS ============ */
+
+@font-face {
+  font-family: WorkSansLight;
+  src: url(../fonts/WorkSans-Light.ttf);
+}
+
+@font-face {
+  font-family: WorkSansRegular;
+  src: url(../fonts/WorkSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: WorkSansSemiBold;
+  src: url(../fonts/WorkSans-SemiBold.ttf);
+}
+
+/* ============ COLORS ============ */
+
+/* #2e2e2e / #867772 für NAV / rgb(234, 204, 194) für Hover auf 2nd NAV Links / #ebccc2  für h und Buy Button / #fff / #737373 */
+
+/* ============ BASIC ============ */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: WorkSansRegular;
+  background-color: #2e2e2e;
+}
+
+/* ============ REUSABLE ============ */
+
+p {
+  color: #737373;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+h1,
+h2 {
+  color: #ebccc2;
+  font-family: WorkSansLight;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+/* ============ TOP NAV ============ */
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1.4rem 8rem 1rem 4rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar .secondary-nav ul {
+  display: flex;
+  gap: 4.4rem;
+  list-style: none;
+}
+
+.top-bar .secondary-nav .socials ul {
+  gap: 1.2rem;
+}
+
+.top-bar .secondary-nav ul li a {
+  text-decoration: none;
+  padding: 0.4rem 0;
+  font-size: 1.2rem;
+  color: #867772;
+  border-bottom: 1px solid #eaccc200;
+  transition: all 0.2s ease;
+}
+
+.top-bar .secondary-nav ul li a:hover {
+  color: #eaccc2;
+  border-bottom: 1px solid #eaccc2;
+}
+
+/* ============ LEFT NAV ============ */
+
+.primary-nav {
+  position: fixed;
+  left: 7rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.primary-nav nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+  list-style-type: none;
+}
+
+.primary-nav nav ul li {
+  position: relative;
+}
+
+.primary-nav nav ul li:not(:last-of-type)::before {
+  content: "";
+  position: absolute;
+  top: 1.9rem;
+  left: -3.28rem;
+  border-left: 0.16rem solid rgba(255, 255, 255, 0.4);
+  height: 5rem;
+}
+
+.primary-nav nav ul li a {
+  position: relative;
+  text-decoration: none;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  transition: all 0.2s ease;
+}
+
+.primary-nav nav ul li a:hover {
+  color: rgba(255, 255, 255);
+}
+
+.primary-nav nav ul li .active-link {
+  position: relative;
+  color: rgba(255, 255, 255);
+}
+
+.primary-nav nav ul li a::before {
+  position: absolute;
+  content: "◯";
+  top: -0.2rem;
+  left: -4rem;
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-right: 2rem;
+}
+
+.primary-nav nav ul li a::after {
+  position: absolute;
+  content: "◯";
+  top: -0.8rem;
+  left: -4.45rem;
+  font-size: 2.2rem;
+  color: rgba(255, 255, 255, 0);
+  margin-right: 2rem;
+  transition: all 0.2s ease;
+}
+
+.primary-nav nav ul li .active-link::after {
+  color: rgba(255, 255, 255);
+}
+
+.primary-nav nav ul li a:hover::after {
+  color: rgba(255, 255, 255);
+}
+
+/* ============ ABOUT ============ */
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10rem;
+  margin: 7rem auto 10rem;
+  padding: 7rem;
+}
+
+.about h2 {
+  align-self: flex-start;
+  margin-left: 25rem;
+  max-width: 30rem;
+  font-weight: 400;
+}
+
+.about > img {
+  width: 85%;
+  max-width: 140rem;
+}
+
+.about > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  width: 75%;
+  max-width: 120rem;
+}
+
+.about > div img {
+  width: 100%;
+  max-width: 110rem;
+  min-width: 35rem;
+}
+
+.about h1 {
+  font-size: 2.6rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+/* ============ LOUNGER / EXPERIENCE ============ */
+
+.lounger,
+.experience,
+.shop {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.lounger-left,
+.experience-left,
+.shop-left {
+  width: 50%;
+  /* flex-shrink: 0; <---- nicht mehr nötig, wenn rechter Container eine Größe (z.B. 50%) zugewiesen bekommt.*/
+  background-image: url("../img/section-voyager.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.experience-left {
+  background-image: url("../img/section-experience-1.jpg");
+}
+
+.shop-left {
+  background-image: url("../img/section-composition4.jpg");
+}
+
+.lounger-right,
+.experience-right,
+.shop-right {
+  display: flex;
+  width: 50%; /* DRINGEND zuweisen, ansonsten Probleme mit Größe von linkem Container */
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5rem 0 5rem;
+}
+
+.lounger h2,
+.experience h2 {
+  margin-bottom: 10rem;
+}
+
+/* ============ SHOP ============ */
+
+.shop-right {
+  align-items: center;
+}
+
+.shop h2 {
+  margin-bottom: 1.4rem;
+}
+
+.shop p {
+  font-size: 2rem;
+  margin-bottom: 2.4rem;
+}
+
+.shop p:nth-of-type(2) {
+  margin-bottom: 0.4rem;
+}
+
+.shop a:link,
+.shop a:visited {
+  background-color: #ebccc2;
+  font-size: 1.4rem;
+  padding: 1.4rem 3rem;
+  text-decoration: none;
+  color: #2e2e2e;
+  letter-spacing: 0.2rem;
+}
+
+/* ============ Inspiration ============ */
+
+.inspiration {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rem;
+}
+
+.video {
+  margin: 10rem auto;
+  width: 80%;
+  max-width: 120rem;
+}
+
+.inspiration > div {
+  width: 80%;
+  max-width: 90rem;
+  margin: 0 auto 8rem;
+}
+
+h2 span {
+  display: block;
+  font-size: 1.8rem;
+  letter-spacing: 0.15rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.inspiration h2 {
+  margin-bottom: 3rem;
+}
+
+.tags p {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  margin-right: 0.4rem;
+  border: 2px solid #737373;
+  font-size: 1.2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.grid img {
+  width: 100%;
+  display: block;
+}
+
+.grid-first-text,
+.grid-second-text {
+  padding: 0 2rem 0 2rem;
+}
+
+/* ============ CONTACT ============ */
+
+.active-link-sub-contact {
+  border-bottom: 1px solid #867772 !important;
+}
+
+.active-link-sub-contact:hover {
+  border-bottom: 1px solid #eaccc2 !important;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  margin: 7rem 0 0 20rem;
+}
+
+.contact-container {
+  width: 80%;
+  max-width: 120rem;
+  margin: 0 auto 8rem;
+}
+
+.contact h2 {
+  align-self: flex-start;
+  margin: 10rem 0 8rem 7rem;
+  font-weight: 400;
+}
+
+.text-img-container {
+  display: flex;
+  gap: 4rem;
+  margin-bottom: 8rem;
+}
+
+.container-left,
+.container-right {
+  width: 50%;
+}
+
+.container-left img {
+  width: 100%;
+}
+
+.form-newsletter {
+  max-width: 60rem;
+}
+
+.form-contact {
+  display: flex;
+  flex-direction: column;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.form-contact .container {
+  display: flex;
+  margin-bottom: 4rem;
+}
+
+.contact-form-left,
+.contact-form-right {
+  width: 50%;
+}
+
+.form-contact label {
+  display: block;
+  font-size: 1.6rem;
+  color: #737373;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+}
+
+.form-contact label span {
+  color: #eaccc2;
+}
+
+.form-newsletter {
+  display: flex;
+  align-items: cen;
+}
+
+#input-email-sub {
+  width: 70%;
+  margin: 0 0.8rem 0 0;
+}
+
+.contact textarea,
+.contact input[type="text"],
+.contact input[type="email"] {
+  padding: 0.5em;
+  width: 90%;
+  color: #737373;
+  background-color: #2e2e2e;
+  border: 1px solid #737373;
+  font-size: 1.6rem;
+  font-family: inherit;
+  margin-bottom: 1.4rem;
+}
+
+.contact textarea {
+  resize: none;
+  margin: 0;
+  width: 100%;
+  height: 87%;
+}
+
+.contact textarea:focus,
+.contact input[type="text"]:focus,
+.contact input[type="email"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 1.2px #fff;
+}
+
+.contact input[type="submit"] {
+  padding: 0.5em;
+  width: 10rem;
+  background-color: #737373;
+  color: #2e2e2e;
+  border: 1px solid #737373;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.contact input[type="submit"]:hover {
+  background-color: #2e2e2e;
+  color: #737373;
+}
+
+fieldset {
+  border: none;
+}
+
+.checkbox-container p {
+  font-weight: 600;
+}
+
+.checkbox-container fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.checkbox-container fieldset label {
+  display: inline-block;
+}
+
+.form-contact .checkbox-container fieldset input {
+  margin-right: 0.4rem;
+}
+
+.form-contact .checkbox-container fieldset label {
+  font-weight: 400;
+}
+
+.form-contact > input[type="submit"] {
+  align-self: center;
+}
